@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-// eslint-disable-next-line linebreak-style
 import { model, Schema } from 'mongoose';
 
 export const Category = model('Category', new Schema({
