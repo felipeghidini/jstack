@@ -18,14 +18,12 @@ export function OrdersBoard(props: OrdersBoardProps) {
       </header>
 
       <OrdersContainer>
-        <button type='button'>
-          <strong>Mesa 2</strong>
-          <span>2 itens</span>
-        </button>
-        <button type='button'>
-          <strong>Mesa 2</strong>
-          <span>2 itens</span>
-        </button>
+        {props.orders.map((order) => (
+          <button type='button' key={order._id}>
+            <strong>Mesa {order.table}</strong>
+            <span>{order.products.length} itens</span>
+          </button>
+        ))};
       </OrdersContainer>
     </Board>
   );
